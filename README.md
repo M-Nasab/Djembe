@@ -1,5 +1,8 @@
 # Djembe
 
+[![Build Status](https://travis-ci.org/M-Nasab/djembe.svg?branch=main)](https://travis-ci.org/M-Nasab/djembe)
+[![NPM Package](https://img.shields.io/npm/v/djembe)](https://www.npmjs.com/package/djembe)
+
 A rhythm maker which emits any data with the given rhythm periodically
 
 ## Installation
