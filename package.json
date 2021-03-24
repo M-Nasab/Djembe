@@ -2,7 +2,7 @@
   "name": "djembe",
   "version": "1.0.0",
   "description": "A rhythm maker which emits any data with the given rhythm periodically",
-  "main": "dist/bundle.js",
+  "main": "dist/bundle.umd.js",
   "module": "dist/bundle.esm.js",
   "repository": {
     "type": "git",
