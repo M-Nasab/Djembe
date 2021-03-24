@@ -12,6 +12,7 @@ npm install --save djembe
 ```
 ## Usage
 
+```
 import { Djembe } from 'djembe';
 
 // create an emitter with initial state [0, 0, 0]
