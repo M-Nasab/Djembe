@@ -51,29 +51,61 @@ describe('djembe', () => {
 
         djembe.tick();
 
-        expect(mockSubscriber).toBeCalledWith([
-            {
-                step: 1,
-                stepper: 0,
-                data: {
-                    volume: 50,
+        expect(mockSubscriber).toBeCalledWith({
+            ticks: [
+                {
+                    step: 1,
+                    stepper: 0,
+                    data: {
+                        volume: 50,
+                    },
+                }
+            ],
+            state: [
+                {
+                    step: 1,
+                    stepper: 0,
                 },
-            }
-        ]);
+                {
+                    step: 0,
+                    stepper: 1,
+                },
+                {
+                    step: 0,
+                    stepper: 2,
+                },
+            ],
+        });
 
         for(let i = 0; i < 4; i++) {
             djembe.tick();
         }
 
-        expect(mockSubscriber).toBeCalledWith([
-            {
-                step: 1,
-                stepper: 1,
-                data: {
-                    volume: 50,
+        expect(mockSubscriber).toBeCalledWith({
+            ticks: [
+                {
+                    step: 1,
+                    stepper: 1,
+                    data: {
+                        volume: 50,
+                    },
+                }
+            ],
+            state: [
+                {
+                    step: 0,
+                    stepper: 0,
                 },
-            }
-        ]);
+                {
+                    step: 1,
+                    stepper: 1,
+                },
+                {
+                    step: 0,
+                    stepper: 2,
+                },
+            ],
+        });
     });
 
     it('Should unsubscribe work correctly', () => {

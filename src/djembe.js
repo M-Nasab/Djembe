@@ -39,13 +39,18 @@ export function Djembe(opts = {}) {
             return shouldBeEmitted;
         });
 
-        emit(emittedTicks);
+        const state = epicle.getState();
+
+        emit(emittedTicks, state);
         
     }
 
-    function emit(events) {
+    function emit(ticks, state) {
         subscribers.forEach((subscriber) => {
-            subscriber(events);
+            subscriber({
+                ticks,
+                state,
+            });
         });
     }
     

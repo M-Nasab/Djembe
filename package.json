@@ -45,6 +45,6 @@
     "rollup-plugin-terser": "^7.0.2"
   },
   "dependencies": {
-    "epicles": "^2.0.2"
+    "epicles": "^2.1.2"
   }
 }
