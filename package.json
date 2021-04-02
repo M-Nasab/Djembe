@@ -1,6 +1,6 @@
 {
   "name": "djembe",
-  "version": "2.0.1",
+  "version": "2.0.0",
   "description": "A rhythm maker which emits any data with the given rhythm periodically",
   "main": "dist/bundle.umd.js",
   "module": "dist/bundle.esm.js",
