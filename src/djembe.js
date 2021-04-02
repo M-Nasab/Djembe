@@ -18,8 +18,9 @@ export function Djembe(opts = {}) {
         steps,
         steppers,
         initialState,
-        ticks,
     } = options;
+
+    let { ticks } = options;
 
     const epicle = epicles({
         steps,
@@ -64,8 +65,13 @@ export function Djembe(opts = {}) {
         return unsubscribe;
     }
 
+    function setTicks (nextTicks) {
+        ticks = nextTicks;
+    }
+
     return {
         subscribe,
         tick,
+        setTicks,
     };
 }
